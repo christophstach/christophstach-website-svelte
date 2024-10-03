@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { IconMoon, IconSun } from '@tabler/icons-svelte';
 
 	let theme: 'dark' | 'light' = 'light';
 
@@ -27,6 +26,6 @@
 	on:click={handleToggleTheme}
 	aria-label="Change the color scheme"
 >
-	<IconSun class="animate-in fade-in zoom-in block dark:hidden" />
-	<IconMoon class="animate-in fade-in zoom-in hidden h-5 w-5 dark:block" />
+	<span class="iconify tabler--sun block h-6 w-6 animate-in fade-in zoom-in dark:hidden"></span>
+	<span class="iconify tabler--moon hidden h-6 w-6 animate-in fade-in zoom-in dark:block"></span>
 </button>

@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	import '../app.css';
 
 	import { format } from 'date-fns';
@@ -9,7 +8,6 @@
 	import Hero from '$lib/components/Hero.svelte';
 
 	import type { Snippet } from 'svelte';
-	import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-svelte';
 
 	let {
 		children
@@ -55,10 +53,10 @@
 				aria-label="LinkedIn Profile"
 				href="https://www.linkedin.com/in/christoph-stach-7586b958"
 			>
-				<IconBrandLinkedin />
+				<span class="iconify tabler--brand-linkedin block h-6 w-6"></span>
 			</SocialLink>
 			<SocialLink aria-label="Github Profile" href="https://github.com/christophstach">
-				<IconBrandGithub />
+				<span class="iconify tabler--brand-github block h-6 w-6"></span>
 			</SocialLink>
 		</div>
 	</div>

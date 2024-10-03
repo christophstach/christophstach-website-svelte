@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { IconMenu, IconX } from '@tabler/icons-svelte';
-
 	import Brand from '$lib/components/Brand.svelte';
 	import ThemeChanger from '$lib/components/ThemeChanger.svelte';
 
@@ -80,9 +78,9 @@
 							aria-label="Open the menu"
 						>
 							{#if open}
-								<IconX class="animate-in fade-in zoom-in" />
+								<span class="iconify tabler--x block h-6 w-6 animate-in fade-in zoom-in"></span>
 							{:else}
-								<IconMenu class="animate-in fade-in zoom-in" />
+								<span class="iconify tabler--menu block h-6 w-6 animate-in fade-in zoom-in"></span>
 							{/if}
 						</button>
 					</div>
@@ -90,9 +88,9 @@
 			</div>
 		</div>
 
-		<div class={cn(open && 'animate-in slide-in-from-top-20 container mx-auto', !open && 'hidden')}>
+		<div class={cn(open && 'container mx-auto animate-in slide-in-from-top-20', !open && 'hidden')}>
 			<ul class="flex flex-col gap-4 py-4">
-				{#each links as link, index}
+				{#each links as link}
 					{@const isActive = link.exact ? pathname === link.href : pathname.startsWith(link.href)}
 					<li>
 						<a

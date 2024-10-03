@@ -1,5 +1,6 @@
 import tailwindcssTypography from '@tailwindcss/typography';
 import tailwindcssAnimate from 'tailwindcss-animate';
+import { addIconSelectors } from '@iconify/tailwind';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -8,5 +9,5 @@ export default {
 	theme: {
 		extend: {}
 	},
-	plugins: [tailwindcssTypography, tailwindcssAnimate]
+	plugins: [tailwindcssTypography, tailwindcssAnimate, addIconSelectors(['tabler'])]
 };
