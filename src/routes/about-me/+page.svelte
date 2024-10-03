@@ -1,9 +1,13 @@
+<script lang="ts">
+
+</script>
+
 <svelte:head>
 	<title>Christoph Stach - About Me</title>
 	<meta property="og:title" content="Christoph Stach - About Me" />
 </svelte:head>
 
-<div class="prose prose-indigo dark:prose-invert sm:prose-sm lg:prose-lg xl:prose-xl mx-auto">
+<div class="prose prose-indigo mx-auto dark:prose-invert sm:prose-sm lg:prose-lg xl:prose-xl">
 	<h2>About Me</h2>
 
 	<p>
