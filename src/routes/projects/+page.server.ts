@@ -1,10 +1,12 @@
-export const prerender = true;
+import { db } from '../../db/client';
+import { projectsTable } from '../../db/schema/projects';
 
-export function load() {
+export const prerender = false;
+
+export async function load() {
+	const projects = await db.select().from(projectsTable);
+
 	return {
-		post: {
-			title: `Title for goes here`,
-			content: `Content for goes here`
-		}
+		projects
 	};
 }

@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-
-	const data = $derived($page.data);
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -12,5 +10,7 @@
 <div class="prose prose-indigo mx-auto dark:prose-invert sm:prose-sm lg:prose-lg xl:prose-xl">
 	Projects
 
-	<pre>{JSON.stringify(data, null, 2)}</pre>
+	{#each data.projects as project}
+		<pre>{JSON.stringify(project, null, 2)}</pre>
+	{/each}
 </div>

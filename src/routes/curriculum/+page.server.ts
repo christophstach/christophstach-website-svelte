@@ -1,8 +1,22 @@
-export const prerender = true;
+import { eq } from 'drizzle-orm';
+import { db } from '../../db/client';
+import { curriculumItemsTable } from '../../db/schema/curriculumItems';
+
+export const prerender = false;
 
 export async function load() {
-	const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-	const data = await response.json();
+	const professionalCurriculumItems = await db
+		.select()
+		.from(curriculumItemsTable)
+		.where(eq(curriculumItemsTable.type, 'PROFESSIONAL'));
 
-	return data;
+	const educationCurriculumItems = await db
+		.select()
+		.from(curriculumItemsTable)
+		.where(eq(curriculumItemsTable.type, 'EDUCATION'));
+
+	return {
+		professionalCurriculumItems,
+		educationCurriculumItems
+	};
 }

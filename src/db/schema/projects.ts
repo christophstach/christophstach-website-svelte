@@ -10,7 +10,12 @@ export const projectsTable = pgTable('projects', {
 	website: varchar(),
 	repository: varchar(),
 	tags: jsonb().$type<string[]>().notNull(),
-	createdAt: timestamp().notNull().defaultNow()
+	createdAt: timestamp()
+		.notNull()
+		.$defaultFn(() => new Date()),
+	updatedAt: timestamp()
+		.notNull()
+		.$onUpdateFn(() => new Date())
 });
 
 export type SelectProject = typeof projectsTable.$inferSelect;

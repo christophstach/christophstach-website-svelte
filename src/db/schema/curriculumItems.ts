@@ -1,4 +1,4 @@
-import { pgTable, timestamp, varchar, text, jsonb, pgEnum } from 'drizzle-orm/pg-core';
+import { pgTable, timestamp, varchar, text, jsonb, pgEnum, PgTimestamp } from 'drizzle-orm/pg-core';
 import { createId } from '@paralleldrive/cuid2';
 
 export const curriculumItemTypeEnum = pgEnum('curriculum_item_type', ['PROFESSIONAL', 'EDUCATION']);
@@ -14,13 +14,18 @@ export const curriculumItemsTable = pgTable('curriculumItems', {
 	dateFrom: timestamp().notNull(),
 	dateTo: timestamp(),
 	bullets: jsonb().$type<string[]>().notNull(),
-	createdAt: timestamp().notNull().defaultNow()
+	createdAt: timestamp()
+		.notNull()
+		.$defaultFn(() => new Date()),
+	updatedAt: timestamp()
+		.notNull()
+		.$onUpdateFn(() => new Date())
 });
 
 export type SelectCurriculumItem = typeof curriculumItemsTable.$inferSelect;
 export type InsertCurriculumItem = typeof curriculumItemsTable.$inferInsert;
 
-export const curriculumItemsSeed: InsertCurriculumItem[] = [
+export const curriculumItemsTableSeed: InsertCurriculumItem[] = [
 	{
 		type: 'EDUCATION',
 		title: 'M.Sc. Applied Computer Science',
