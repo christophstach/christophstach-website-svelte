@@ -7,13 +7,7 @@
 	import SocialLink from '$lib/components/SocialLink.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 
-	import type { Snippet } from 'svelte';
-
-	let {
-		children
-	}: {
-		children: Snippet;
-	} = $props();
+	let { children, data } = $props();
 </script>
 
 <svelte:head>
@@ -53,10 +47,10 @@
 				aria-label="LinkedIn Profile"
 				href="https://www.linkedin.com/in/christoph-stach-7586b958"
 			>
-				<span class="iconify tabler--brand-linkedin block h-6 w-6"></span>
+				<span class="iconify block h-6 w-6 tabler--brand-linkedin"></span>
 			</SocialLink>
 			<SocialLink aria-label="Github Profile" href="https://github.com/christophstach">
-				<span class="iconify tabler--brand-github block h-6 w-6"></span>
+				<span class="iconify block h-6 w-6 tabler--brand-github"></span>
 			</SocialLink>
 		</div>
 	</div>

@@ -3,7 +3,7 @@ import { createId } from '@paralleldrive/cuid2';
 
 export const curriculumItemTypeEnum = pgEnum('curriculum_item_type', ['PROFESSIONAL', 'EDUCATION']);
 
-export const curriculumItemsTable = pgTable('curriculumItems', {
+export const curriculumItemsTable = pgTable('curriculum_items', {
 	id: varchar()
 		.$defaultFn(() => createId())
 		.primaryKey(),

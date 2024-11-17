@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Brand from '$lib/components/Brand.svelte';
-	import ThemeChanger from '$lib/components/ThemeChanger.svelte';
+	import ColorSchemeChanger from '$lib/components/ColorSchemeChanger.svelte';
 
 	import { cn } from '$lib/utils';
 	import { page } from '$app/stores';
@@ -68,7 +68,7 @@
 			<div>
 				<div class="flex gap-4">
 					<div>
-						<ThemeChanger />
+						<ColorSchemeChanger />
 					</div>
 					<div class="block md:hidden">
 						<button

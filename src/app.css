@@ -8,8 +8,8 @@ body {
 	background: #fff;
 }
 
-html.dark,
-html.dark body {
+html[data-color-scheme='dark'],
+html[data-color-scheme='dark'] body {
 	color: #fff;
 	background: #000;
 }
