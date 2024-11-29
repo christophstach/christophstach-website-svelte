@@ -7,7 +7,7 @@
 	import SocialLink from '$lib/components/SocialLink.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 
-	let { children, data } = $props();
+	let { children } = $props();
 </script>
 
 <svelte:head>

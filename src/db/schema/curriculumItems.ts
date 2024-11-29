@@ -1,4 +1,4 @@
-import { pgTable, timestamp, varchar, text, jsonb, pgEnum, PgTimestamp } from 'drizzle-orm/pg-core';
+import { pgTable, timestamp, varchar, text, jsonb, pgEnum } from 'drizzle-orm/pg-core';
 import { createId } from '@paralleldrive/cuid2';
 
 export const curriculumItemTypeEnum = pgEnum('curriculum_item_type', ['PROFESSIONAL', 'EDUCATION']);
