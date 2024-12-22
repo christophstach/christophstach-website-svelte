@@ -78,9 +78,9 @@
 							aria-label="Open the menu"
 						>
 							{#if open}
-								<span class="iconify tabler--x block h-6 w-6 animate-in fade-in zoom-in"></span>
+								<span class="iconify block h-6 w-6 animate-in fade-in zoom-in tabler--x"></span>
 							{:else}
-								<span class="iconify tabler--menu block h-6 w-6 animate-in fade-in zoom-in"></span>
+								<span class="iconify block h-6 w-6 animate-in fade-in zoom-in tabler--menu"></span>
 							{/if}
 						</button>
 					</div>

@@ -3,7 +3,7 @@
 	<meta property="og:title" content="Christoph Stach - Home" />
 </svelte:head>
 
-<div class="prose prose-indigo mx-auto dark:prose-invert sm:prose-sm lg:prose-lg xl:prose-xl">
+<div class="prose prose-indigo mx-auto sm:prose-sm lg:prose-lg xl:prose-xl dark:prose-invert">
 	<h2>Home</h2>
 
 	<p>
