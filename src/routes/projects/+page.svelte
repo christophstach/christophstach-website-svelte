@@ -13,7 +13,7 @@
 	<h2>Projects</h2>
 </div>
 
-<div class="grid max-w-screen-lg grid-cols-3 gap-5 mx-auto mt-8">
+<div class="grid max-w-screen-lg grid-cols-1 gap-5 mx-auto mt-8 md:grid-cols-2 lg:grid-cols-3">
 	{#each data.projects as project}
 		<div class="p-4 prose-sm prose border prose-indigo dark:prose-invert">
 			<h3>
