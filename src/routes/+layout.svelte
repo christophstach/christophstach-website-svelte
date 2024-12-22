@@ -31,12 +31,12 @@
 	<Hero />
 </div>
 
-<main class="container mx-auto my-12 px-4">
+<main class="px-4 my-12">
 	{@render children()}
 </main>
 
 <footer class="bg-neutral-50 p-2.5 dark:bg-neutral-900">
-	<div class="container mx-auto flex items-center">
+	<div class="flex items-center max-w-screen-lg mx-auto">
 		<div class="flex-1">
 			<small>
 				Copyright &copy; 2022 - {format(new Date(), 'yyyy')} Christoph Stach
@@ -47,10 +47,10 @@
 				aria-label="LinkedIn Profile"
 				href="https://www.linkedin.com/in/christoph-stach-7586b958"
 			>
-				<span class="iconify block h-6 w-6 tabler--brand-linkedin"></span>
+				<span class="block w-6 h-6 iconify tabler--brand-linkedin"></span>
 			</SocialLink>
 			<SocialLink aria-label="Github Profile" href="https://github.com/christophstach">
-				<span class="iconify block h-6 w-6 tabler--brand-github"></span>
+				<span class="block w-6 h-6 iconify tabler--brand-github"></span>
 			</SocialLink>
 		</div>
 	</div>

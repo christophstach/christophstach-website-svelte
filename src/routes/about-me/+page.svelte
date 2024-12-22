@@ -6,7 +6,9 @@
 	<meta property="og:title" content="Christoph Stach - About Me" />
 </svelte:head>
 
-<div class="prose prose-indigo mx-auto sm:prose-sm lg:prose-lg xl:prose-xl dark:prose-invert">
+<div
+	class="max-w-screen-lg mx-auto prose prose-indigo sm:prose-sm lg:prose-lg xl:prose-xl dark:prose-invert"
+>
 	<h2>About Me</h2>
 
 	<p>
