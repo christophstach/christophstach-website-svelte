@@ -17,7 +17,6 @@
 	"devDependencies": {
 		"@iconify-json/tabler": "^1.2.13",
 		"@iconify/tailwind": "^1.2.0",
-		"@sveltejs/adapter-auto": "^3.3.1",
 		"@sveltejs/kit": "^2.15.1",
 		"@sveltejs/vite-plugin-svelte": "^5",
 		"@tailwindcss/typography": "^0.5.15",
@@ -44,6 +43,7 @@
 	"type": "module",
 	"dependencies": {
 		"@paralleldrive/cuid2": "^2.2.2",
+		"@sveltejs/adapter-vercel": "^5.5.2",
 		"clsx": "^2.1.1",
 		"date-fns": "^4.1.0",
 		"dotenv": "^16.4.7",
