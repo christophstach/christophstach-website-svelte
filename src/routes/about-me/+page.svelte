@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div
-	class="max-w-screen-lg mx-auto prose prose-indigo sm:prose-sm lg:prose-lg xl:prose-xl dark:prose-invert"
+	class="prose prose-indigo mx-auto max-w-screen-lg sm:prose-sm lg:prose-lg xl:prose-xl dark:prose-invert"
 >
 	<h2>About Me</h2>
 

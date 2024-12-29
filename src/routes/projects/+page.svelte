@@ -8,20 +8,18 @@
 </svelte:head>
 
 <div
-	class="max-w-screen-lg mx-auto prose prose-indigo sm:prose-sm lg:prose-lg xl:prose-xl dark:prose-invert"
+	class="prose prose-indigo mx-auto max-w-screen-lg sm:prose-sm lg:prose-lg xl:prose-xl dark:prose-invert"
 >
 	<h2>Projects</h2>
 </div>
 
-<div class="grid max-w-screen-lg grid-cols-1 gap-5 mx-auto mt-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="mx-auto mt-8 grid max-w-screen-lg grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
 	{#each data.projects as project}
-		<div class="p-4 prose-sm prose border prose-indigo dark:prose-invert">
-			<h3>
-				{project.title}
-			</h3>
+		<div class="prose prose-sm prose-indigo border p-4 dark:prose-invert">
+			<h3>{project.title}</h3>
 			<div>
 				<div>{@html project.description}</div>
-				<div class="flex flex-wrap w-full gap-1 mt-5 overflow-hidden">
+				<div class="mt-5 flex w-full flex-wrap gap-1 overflow-hidden">
 					{#each project.tags as tag}
 						<div class="rounded bg-indigo-500 px-1 py-0.5 text-xs text-white">
 							{tag}
