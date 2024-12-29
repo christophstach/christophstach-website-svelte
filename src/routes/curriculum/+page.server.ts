@@ -2,8 +2,6 @@ import { eq } from 'drizzle-orm';
 import { db } from '../../db/client';
 import { curriculumItemsTable } from '../../db/schema/curriculumItems';
 
-export const prerender = false;
-
 export async function load() {
 	const professionalCurriculumItems = await db
 		.select()
