@@ -10,9 +10,13 @@ export async function POST({ request, cookies }) {
 
 	const result = schema.safeParse(json);
 
+	console.error(result);
+
 	if (result.success) {
 		const { colorScheme } = result.data;
 		cookies.set(PUBLIC_COOKIE_COLOR_SCHEME, colorScheme, { path: '/' });
+
+		return new Response(colorScheme);
 	} else {
 		return error(400, result.error.toString());
 	}
