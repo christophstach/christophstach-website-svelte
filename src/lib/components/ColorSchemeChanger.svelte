@@ -1,13 +1,21 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { PUBLIC_COOKIE_COLOR_SCHEME } from '$env/static/public';
 
-	function handleToggleColorScheme() {
+	async function handleToggleColorScheme() {
 		if (browser) {
 			document.documentElement.dataset.colorScheme =
 				document.documentElement.dataset.colorScheme === 'dark' ? 'light' : 'dark';
 
-			document.cookie = `${PUBLIC_COOKIE_COLOR_SCHEME}=${document.documentElement.dataset.colorScheme}; path=/; SameSite=Lax; Secure`;
+			await fetch(`/api/color-scheme`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					colorScheme: document.documentElement.dataset.colorScheme
+				})
+			});
+			// document.cookie = `${PUBLIC_COOKIE_COLOR_SCHEME}=${document.documentElement.dataset.colorScheme}; path=/; SameSite=Lax; Secure`;
 		}
 	}
 </script>
@@ -18,6 +26,6 @@
 	on:click={handleToggleColorScheme}
 	aria-label="Change the color scheme"
 >
-	<span class="iconify block h-6 w-6 animate-in fade-in zoom-in tabler--sun dark:hidden"></span>
-	<span class="iconify hidden h-6 w-6 animate-in fade-in zoom-in tabler--moon dark:block"></span>
+	<span class="block w-6 h-6 iconify animate-in fade-in zoom-in tabler--sun dark:hidden"></span>
+	<span class="hidden w-6 h-6 iconify animate-in fade-in zoom-in tabler--moon dark:block"></span>
 </button>
