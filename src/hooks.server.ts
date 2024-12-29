@@ -3,7 +3,7 @@ import { PUBLIC_COOKIE_COLOR_SCHEME } from '$env/static/public';
 export async function handle({ event, resolve }) {
 	const { locals, cookies } = event;
 
-	locals.colorScheme = (cookies.get(PUBLIC_COOKIE_COLOR_SCHEME) || 'system') as
+	locals.colorScheme = (cookies.get(PUBLIC_COOKIE_COLOR_SCHEME) ?? 'system') as
 		| 'light'
 		| 'dark'
 		| 'system';
